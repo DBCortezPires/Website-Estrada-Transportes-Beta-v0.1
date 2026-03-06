@@ -1,0 +1,150 @@
+/* Area Header */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.header{
+width:100%;
+background:#fff;
+border-bottom:1px solid #ddd;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px 20px;
+}
+
+.logo img{
+height:40px;
+}
+
+.nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px){
+
+.nav{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+display:none;
+}
+
+.nav ul{
+flex-direction:column;
+padding:20px;
+gap:15px;
+}
+
+.nav.active{
+display:block;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
+
+/* Animação Header */
+
+.header{
+width:100%;
+background:#fff;
+border-bottom:1px solid #eee;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+transition:all 0.3s ease;
+}
+
+.header.scrolled{
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+padding:10px 0;
+}
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Fim da Area Header */
+
+/* Hover Botão */
+
+.btn-contato{
+background:#0077ff;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+transition:all 0.3s ease;
+}
+
+.btn-contato:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Fim do Hover Botão */
+
+/* Hover Menu */
+
+.nav a{
+position:relative;
+}
+
+.nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:#0077ff;
+transition:0.3s;
+}
+
+.nav a:hover::after{
+width:100%;
+}
+
+/* Fim do Hover Botão */
