@@ -1,14 +1,29 @@
+
+// Header Mobile
 document.addEventListener("DOMContentLoaded", function(){
 
 const toggle = document.getElementById("menu-toggle");
 const nav = document.getElementById("nav");
+const overlay = document.getElementById("overlay");
 
 toggle.addEventListener("click", function(){
-  nav.classList.toggle("active");
+    toggle.classList.toggle("active");
+    nav.classList.toggle("active");
+    overlay.classList.toggle("active");
 });
+
+overlay.addEventListener("click", function(){
+
+toggle.classList.remove("active");
+nav.classList.remove("active");
+overlay.classList.remove("active");
 
 });
 
+
+});
+
+// Header com scroll
 window.addEventListener("scroll", function(){
 
 const header = document.querySelector(".header");

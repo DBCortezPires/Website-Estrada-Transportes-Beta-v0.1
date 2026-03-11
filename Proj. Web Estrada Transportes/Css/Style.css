@@ -13,7 +13,7 @@ border-bottom:1px solid #ddd;
 position:fixed;
 top:0;
 left:0;
-z-index:1000;
+z-index:2000;
 }
 
 .container{
@@ -43,21 +43,58 @@ font-weight:500;
 
 .menu-toggle{
 display:none;
-font-size:28px;
+flex-direction:column;
+gap:5px;
 cursor:pointer;
 }
 
-/* RESPONSIVO */
+.menu-toggle span{
+width:28px;
+height:3px;
+background:#333;
+display:block;
+transition:0.3s;
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.45);
+
+opacity:0;
+visibility:hidden;
+
+transition:0.3s;
+
+z-index:1000;
+}
+
+.overlay.active{
+opacity:1;
+visibility:visible;
+}
+
+/* Responsivo Mobile */
 
 @media (max-width: 768px){
 
 .nav{
+border-top:1px solid #eee;
 position:absolute;
 top:70px;
 left:0;
 width:100%;
 background:white;
-display:none;
+z-index:1500;
+
+max-height:0;
+overflow:hidden;
+
+transition:max-height 0.4s cubic-bezier(.4,0,.2,1);
 }
 
 .nav ul{
@@ -67,14 +104,29 @@ gap:15px;
 }
 
 .nav.active{
-display:block;
+max-height:300px;
+box-shadow:0 8px 15px rgba(0,0,0,0.15);
 }
 
 .menu-toggle{
-display:block;
+display:flex;
+}
+
+
+.menu-toggle.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+
+.menu-toggle.active span:nth-child(2){
+opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
 }
 
 }
+/* Fim responsivo Mobile */
 
 /* Animação Header */
 
@@ -85,7 +137,7 @@ border-bottom:1px solid #eee;
 position:fixed;
 top:0;
 left:0;
-z-index:1000;
+z-index:2000;
 transition:all 0.3s ease;
 }
 
@@ -104,6 +156,8 @@ transition:all 0.8s ease;
 opacity:1;
 transform:translateY(0);
 }
+
+/* Fim animação header */
 
 /* Fim da Area Header */
 
@@ -188,14 +242,24 @@ margin-bottom:15px;
 margin-bottom:20px;
 }
 
-.banner button{
-padding:12px 25px;
-border:none;
+.banner-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 28px;
+
 background:#0077ff;
 color:white;
-font-size:16px;
-cursor:pointer;
-border-radius:5px;
+
+text-decoration:none;
+font-weight:600;
+
+border-radius:6px;
+
+transition:0.3s;
+}
+
+.banner-btn:hover{
+background:#005fcc;
 }
 
 /* Fim do Banner */
@@ -226,3 +290,92 @@ border-radius:10px;
 }
 
 /* Fim da Galeria */
+
+/* Página ativa */
+.nav a.active{
+color:#0077ff;
+font-weight:600;
+}
+
+/* Fim da Página Ativa */
+
+/* Página Localização */
+
+.pagina-topo{
+padding:120px 20px 60px;
+text-align:center;
+background:#f5f5f5;
+}
+
+.pagina-topo h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.pagina-topo p{
+color:#666;
+}
+
+/* Mapa */
+
+.mapa{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+/* Fim do Mapa */
+
+
+/* Endereço */
+
+.endereco{
+max-width:800px;
+margin:auto;
+padding:40px 20px;
+text-align:center;
+}
+
+.endereco h2{
+margin-bottom:20px;
+font-size:30px;
+}
+
+.endereco p{
+margin-bottom:10px;
+line-height:1.6;
+color:#444;
+}
+/* Fim do Endereço */
+
+/* CTA Contato */
+
+.cta-contato{
+background:#0077ff;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.cta-contato h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.botao-contato{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:white;
+color:#0077ff;
+text-decoration:none;
+font-weight:bold;
+border-radius:6px;
+transition:0.3s;
+}
+
+.botao-contato:hover{
+background:#f0f0f0;
+}
+/* Fim CTA Contato */
+
+/* Fim da Página Localização */
