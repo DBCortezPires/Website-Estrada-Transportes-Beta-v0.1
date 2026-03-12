@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function(){
 
 const toggle = document.getElementById("menu-toggle");
-const nav = document.getElementById("nav");
+const nav = document.querySelector(".nav");
 const overlay = document.getElementById("overlay");
 
 toggle.addEventListener("click", function(){
@@ -55,3 +55,22 @@ element.classList.add("active");
 }
 
 window.addEventListener("scroll", reveal);
+function revealElements(){
+
+const reveals = document.querySelectorAll(".reveal");
+
+reveals.forEach((element)=>{
+
+const windowHeight = window.innerHeight;
+const elementTop = element.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 100){
+element.classList.add("active");
+}
+
+});
+
+}
+
+window.addEventListener("scroll", revealElements);
+window.addEventListener("load", revealElements);
