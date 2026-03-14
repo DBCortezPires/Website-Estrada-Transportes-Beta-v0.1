@@ -10,38 +10,179 @@
 </head>
 <body>
       <!-- Header -->
-<header class="header">
+  <header class="header">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="logo">
-        <a href="Main.html">
-          <img src="Imagens/ESTRADA.png" alt="Estrada Transportes">
-        </a>
+      <div class="logo">
+          <a href="Main.html">
+            <img src="Imagens/ESTRADA.png" alt="Estrada Transportes">
+          </a>
+      </div>
+
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="Main.html">Início</a></li>
+          <li><a href="Somos.html">Quem Somos</a></li>
+          <li><a href="Estrutura.html">Estrutura</a></li>
+          <li><a href="Serviços.html">Serviços</a></li>
+          <li><a href="Localização.html">Localização</a></li>
+          <li><a href="Contato.html" class="active">Contato</a></li>
+        </ul>
+      </nav>
+      
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
 
-    <nav class="nav" id="nav">
-      <ul>
-        <li><a href="Main.html">Início</a></li>
-        <li><a href="Somos.html">Quem Somos</a></li>
-        <li><a href="Estrutura.html">Estrutura</a></li>
-        <li><a href="Serviços.html">Serviços</a></li>
-        <li><a href="Localização.html">Localização</a></li>
-        <li><a href="Contato.html" class="active">Contato</a></li>
-      </ul>
-    </nav>
-    
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+
+      <!-- Entre em contato -->
+  <section class="pagina-topo">
+
+    <h1>Entre em Contato</h1>
+
+    <p>
+    Nossa equipe está pronta para atender você e encontrar a melhor solução logística.
+    </p>
+
+  </section>
+
+
+
+  <section class="contato-rapido">
+
+    <div class="container-contato">
+
+      <a href="https://www.instagram.com/estradatransportesoficial/" target="_blank" class="contato-card instagram">
+
+      <i class="fa-brands fa-instagram"></i>
+
+      <h3>Instagram</h3>
+
+      <p>Acompanhe nossas operações e novidades.</p>
+
+      </a>
+
+
+      <a href="https://wa.me/5513999999999" class="contato-card whatsapp">
+
+      <i class="fa-brands fa-whatsapp"></i>
+
+      <h3>WhatsApp</h3>
+
+      <p>Fale direto com nosso atendimento.</p>
+
+      </a>
+
+      <!--editar o email-->
+      <a href="mailto:email@email.com.br" class="contato-card email">
+
+      <i class="fa-solid fa-envelope"></i>
+
+      <h3>Email</h3>
+
+      <p>Envie uma mensagem para nossa equipe.</p>
+
+      </a>
+
     </div>
 
-  </div>
+  </section>
 
-</header>
+<!-- Localização (Página contato)-->
 
-<div class="overlay" id="overlay"></div>
+  <section class="contato-patio">
+
+    <div class="patio-overlay">
+
+      <h2>Estrutura preparada para sua operação logística</h2>
+
+      <p>
+      Mais de 42 anos de experiência operando próximo ao Porto de Santos,
+      com infraestrutura preparada para atender grandes demandas.
+      </p>
+
+      <a href="Localização.html" class="btn-patio">
+      Ver nossa localização
+      </a>
+
+    </div>
+
+  </section>
+
+        <!-- Elementos Visuais -->
+  <section class="barra-numeros">
+
+    <div class="container-numeros">
+
+      <div class="numero-item">
+        <h3>42+</h3>
+        <p>Anos de experiência</p>
+      </div>
+
+      <div class="numero-item">
+        <h3>2.300</h3>
+        <p>TEUs de capacidade</p>
+      </div>
+
+      <div class="numero-item">
+        <h3>18.000m²</h3>
+        <p>Área pavimentada</p>
+      </div>
+
+      <div class="numero-item">
+        <h3>3.000m²</h3>
+        <p>Armazém coberto</p>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- Form de contato -->
+
+  <section class="formulario-contato">
+
+    <div class="container-formulario">
+
+      <h2>Envie uma mensagem</h2>
+
+      <form class="form-contato">
+
+        <div class="input-group">
+        <input type="text" required>
+        <label>Seu nome</label>
+        </div>
+
+        <div class="input-group">
+        <input type="email" required>
+        <label>Seu email</label>
+        </div>
+
+        <div class="input-group">
+        <textarea required></textarea>
+        <label>Sua mensagem</label>
+        </div>
+
+        <button type="submit" class="btn-enviar">
+        Enviar Mensagem
+        </button>
+
+        <p class="form-sucesso" id="form-sucesso">
+        Mensagem enviada com sucesso! Nossa equipe responderá em breve.
+        </p>
+
+      </form>
+
+    </div>
+
+  </section>
     
 <script src="Javascript/Script.js"></script>
 </body>

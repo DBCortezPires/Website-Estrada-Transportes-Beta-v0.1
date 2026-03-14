@@ -74,3 +74,18 @@ element.classList.add("active");
 
 window.addEventListener("scroll", revealElements);
 window.addEventListener("load", revealElements);
+
+// Sucesso ao enviar formulario de contato
+
+const form = document.querySelector(".form-contato");
+const sucesso = document.getElementById("form-sucesso");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+sucesso.style.display = "block";
+
+form.reset();
+
+});
