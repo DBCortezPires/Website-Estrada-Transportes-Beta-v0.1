@@ -1015,3 +1015,263 @@ font-size:14px;
 }
 
 /* Fim da página Quem Somos */
+
+/* Estrutura */
+
+.estrutura-tour{
+
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+
+display:flex;
+flex-direction:column;
+gap:80px;
+
+}
+
+.estrutura-item{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:50px;
+
+}
+
+.estrutura-item img{
+
+width:100%;
+border-radius:10px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+.estrutura-texto h2{
+
+font-size:28px;
+margin-bottom:15px;
+
+}
+
+.estrutura-texto p{
+
+font-size:16px;
+line-height:1.6;
+color:#555;
+
+}
+
+.estrutura-item.reverse img{
+
+order:2;
+
+}
+
+.estrutura-item.reverse .estrutura-texto{
+
+order:1;
+
+}
+
+.fluxo-operacional{
+
+padding:80px 20px;
+background:#f8f8f8;
+text-align:center;
+
+}
+
+.fluxo-operacional h2{
+
+font-size:32px;
+margin-bottom:50px;
+
+}
+
+.fluxo-container{
+
+max-width:900px;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+
+}
+
+.fluxo-item{
+
+text-align:center;
+
+}
+
+.fluxo-item i{
+
+font-size:40px;
+color:#0077ff;
+margin-bottom:15px;
+
+}
+
+.fluxo-item p{
+
+font-weight:600;
+
+}
+
+.galeria-patio{
+
+padding:80px 20px;
+text-align:center;
+
+}
+
+.galeria-patio h2{
+
+font-size:32px;
+margin-bottom:40px;
+
+}
+
+.galeria-scroll{
+
+display:flex;
+gap:20px;
+
+overflow-x:auto;
+padding-bottom:10px;
+
+scroll-behavior:smooth;
+
+}
+
+.galeria-scroll img{
+
+height:260px;
+border-radius:10px;
+
+flex-shrink:0;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+.galeria-patio{
+
+padding:80px 20px;
+text-align:center;
+
+}
+
+.galeria-patio h2{
+
+font-size:32px;
+margin-bottom:40px;
+
+}
+
+.galeria-scroll{
+
+display:flex;
+gap:20px;
+
+overflow-x:auto;
+padding-bottom:10px;
+
+scroll-behavior:smooth;
+
+}
+
+.galeria-scroll img{
+
+height:260px;
+border-radius:10px;
+
+flex-shrink:0;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+.ficha-tecnica{
+
+padding:80px 20px;
+background:#111;
+color:white;
+text-align:center;
+
+}
+
+.ficha-tecnica h2{
+
+font-size:32px;
+margin-bottom:50px;
+
+}
+
+.ficha-grid{
+
+max-width:900px;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+
+}
+
+.ficha-grid h3{
+
+font-size:36px;
+color:#0077ff;
+
+}
+
+.ficha-grid p{
+
+margin-top:10px;
+color:#ccc;
+
+}
+
+/* Estrutura Mobile Responsivo */
+
+@media (max-width:768px){
+
+.estrutura-item{
+
+grid-template-columns:1fr;
+text-align:center;
+
+}
+
+.estrutura-item.reverse img,
+.estrutura-item.reverse .estrutura-texto{
+
+order:initial;
+
+}
+
+.fluxo-container{
+
+grid-template-columns:1fr 1fr;
+
+gap:30px;
+
+}
+
+.galeria-scroll img{
+
+height:200px;
+
+}
+
+.ficha-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
